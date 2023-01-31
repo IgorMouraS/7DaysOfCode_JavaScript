@@ -1,3 +1,5 @@
+// a sua tarefa de hoje é reescrever o código abaixo de maneira que ele imprima as informações de maneira correta
+
 let numeroUm = 1
 let stringUm = '1'
 let numeroTrinta = 30
