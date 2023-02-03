@@ -3,7 +3,7 @@ const idade = prompt("Quantos anos você tem?");
 const linguagem = prompt("Qual linguagem de programação você está estudando?");
 
 const msg = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
-console.log(msg);
+alert(msg);
 
 const msg2 = `Você gosta de estudar ${linguagem}?`;
 console.log(msg2)
