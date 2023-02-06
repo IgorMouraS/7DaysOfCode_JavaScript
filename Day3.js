@@ -1,57 +1,39 @@
-let area = 0;
-let frontEnd = 0;
-let backEnd = 0;
-let especializarOuFullStack = 0;
+let area = "";
+let linguagem = "";
+let nivel = 0;
 
-let areaMsg = "";
-let frontEndMsg = ""
-let backEndMsg = ""
-let especializarOuFullStackMsg = ""
-
-let tecnologias = "";
-
-if (area == 0){
-    area = prompt("Qual área você deseja seguir? 1 para Front-End, 2 para Back-End");
+while (nivel === 0){
+    area = prompt("Você quer seguir para área de 'Front-End' ou de 'Back-End'? Digite o nome da área:");
+    if (area === "Front-End"){
+        linguagem = prompt("Você quer aprender React ou Vue?");
+        nivel = 1;
+    }
+    else if (area === "Back-End"){
+        linguagem = prompt("Você quer aprender C# ou Java?");
+        nivel = 1;
+    } else{
+        alert("Você não inseriu uma área válida!");
+    }
 }
 
-if (area == 1){
-    frontEnd = prompt ("Legal! você gosta de Front-End! Por onde deseja começar? 1 para React, 2 para Vue");
-    areaMsg = "Front-End";
-}else if (area == 2){
-    backEnd = prompt ("Legal! Você gosta de Back-End! Por onde deseja começar? 1 para C#, 2 para Java");
-    areaMsg = "Back-End";
-}else{
-    area = 0;
+while (nivel === 1){
+    let especialidadeOuFullstack = prompt("Digite 1 para seguir se especializando na área escolhida ou 2 para seguir se desenvolvendo para se tornar Fullstack");
+    if (especialidadeOuFullstack == 1){
+        alert(`Continue se especializando em ${linguagem} para dominar a área de ${area}!`);
+        nivel = 2;
+    }
+    else if (especialidadeOuFullstack == 2){
+        alert(`Chegou a hora de começar a aprender outras linguagens além de ${linguagem} se você quer se tornar Fullstack!`);
+        nivel = 2;
+    }
+    else {
+        alert("Você não inseriu um valor válido!");
+    }
 }
 
-if(frontEnd == 1){
-    frontEndMsg = "React";
-}else if (frontEnd == 2){
-    frontEndMsg = "Vue";
-}else{
-    area = 0;
-    backEndMsg = "";
+let msg = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo.");
+while (msg === "ok"){
+    let novaTecnologia = prompt("Qual?");
+    alert(`${novaTecnologia} é realmente uma tecnologia muito legal!`)
+    msg = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo.");
 }
-
-if(backEnd == 1){
-    backEndMsg = "C#";
-}else if (backEnd == 2){
-    backEndMsg = "Java";
-}else{
-    area = 0;
-    frontEndMsg = "";
-}
-
-especializarOuFullStack = prompt ("Interessante! digite 1 se você deseja se especializar na área, digite 2 se você deseja se tornar um desenvolvedor FullStack")
-
-if(especializarOuFullStack == 1){
-    especializarOuFullStackMsg = "se especializar na área";
-}else if (especializarOuFullStack == 2){
-    especializarOuFullStackMsg = "se tornar um desenvolvedor FullStack";
-}else{
-    area = 0;
-}
-
-tecnologias = prompt ("Existe outras tecnologias nas quais você gostaria de se especializar ou de conhecer? Quais?")
-
-alert("Que legal! Então você decidiu seguir na area de ", areaMsg, ". Começando por ", frontEndMsg, backEndMsg, ". O que você quer para o futuro é ", especializarOuFullStackMsg);
